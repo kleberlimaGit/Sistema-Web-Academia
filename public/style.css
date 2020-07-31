@@ -202,7 +202,16 @@ a.button{
 
 #delete button{
     margin-top: 8px;
+    color: var(--radio-color2);
+    background-color: #fafffd;
+    transition: 0.2s;
+}
+
+#delete button:hover{
+    margin-top: 8px;
     background-color: var(--radio-color2);
+    color: #fafffd;
+    transition: 0.2s;
 }
 
 /* == Index Instructors */
