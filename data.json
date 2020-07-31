@@ -1,0 +1,63 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=643&q=80",
+      "name": "Denise S Souza",
+      "email": "mov.kleber@gmail.com",
+      "birth": 649209600000,
+      "gender": "F",
+      "blood": "A1",
+      "weight": "80",
+      "height": "159",
+      "imc": 31.644317867172973,
+      "peso": "class II obesity"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://www.google.com.br",
+      "name": "kleber ricardo da paixao lima",
+      "email": "mov_kleber@hotmail.com",
+      "birth": 649209600000,
+      "gender": "M",
+      "blood": "A1",
+      "weight": "68",
+      "height": "171",
+      "imc": 23.25501863821347,
+      "peso": "Normal Weight"
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "name": "Denise S Souza",
+      "email": "mov.kleber@gmail.com",
+      "birth": 913939200000,
+      "gender": "M",
+      "blood": "A1",
+      "weight": "40",
+      "height": "180",
+      "imc": 12.345679012345679,
+      "peso": "Underweight"
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=643&q=80",
+      "name": "kleber lima",
+      "birth": 819590400000,
+      "gender": "M",
+      "speciality": "Musculação",
+      "created_at": "2020-07-30T16:40:11.923Z"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1577221084712-45b0445d2b00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=643&q=80",
+      "name": "Denise S Souza",
+      "birth": 656294400000,
+      "gender": "F",
+      "speciality": "zuadenta",
+      "created_at": "2020-07-30T16:40:33.230Z"
+    }
+  ]
+}

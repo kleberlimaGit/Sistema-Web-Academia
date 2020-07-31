@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="card">
+    <section class="avatar" style="
+        background: url({{ instructor.avatar_url }}) no-repeat center center / cover;
+    "></section>
+    <section class="details">
+        
+        <div class="back-arrow">
+            <h3>DETAILS</h3>
+            <a href="/"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        
+
+        <div class="item">
+            <div>Instuctor</div>
+            <div>{{ instructor.name }}</div>
+        </div>
+                
+        <div class="item">
+            <div>Age</div>
+            <div>{{ instructor.age}}</div>
+        </div>
+                
+        <div class="item">
+            <div>Sex</div>
+            <div>{{ "Male" if instructor.gender == "M" else "Female" }}</div>
+        </div>
+                
+        <div class="item">
+            <div>Specialty</div>
+            <div>
+                {% for services in instructor.speciality %}
+                     <span>{{ services }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Since</div>
+            <div>{{instructor.created_at}}</div>
+        </div>
+
+        <a href="/instructors/{{instructor.id}}/edit" class="button">Edit</a>
+        <!--<a href="#" class="button delete">Delete</a>  -->
+
+        
+    </section>
+</div>    
+
+{% endblock content %}
