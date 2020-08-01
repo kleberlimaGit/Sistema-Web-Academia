@@ -2,35 +2,18 @@
 const fs = require('fs')
 const data = require('../data.json')
 const moment = require('moment')
-const { age, imc, peso } = require('../utils')
+const { date, imc, peso } = require('../utils')
 
 moment.locale('pt-BR')
-// show
-exports.show = (req, res)=>{
-    // req.params.id = /:id mostra na pagina de acordo com o id
 
-    const { id } = req.params
-
-    const foundMember = data.members.find(function(member){
-        return member.id == id
-    })
-
-    if(!foundMember){
-        return res.send("Member not found")
-    }
-
-
-    const member = {
-        ...foundMember, // pega tudo dentro de foundMember
-        age: age(foundMember.birth),
-       //created_at: new moment(foundMember.created_at).format('L')
-    }
-
-    return res.render("members/show", {member})
+exports.index = (req,res)=>{
+    return res.render('members/index', { members: data.members })
 }
 
+exports.create = (req,res)=>{
+    return res.render('members/create')
+}
 
-// create
 exports.post = (req,res)=>{
  
     const keys = Object.keys(req.body)
@@ -80,11 +63,30 @@ exports.post = (req,res)=>{
     //return res.send(req.body)
 }
 
-exports.create = (req,res)=>{
-    return res.render('members/create')
+
+exports.show = (req, res)=>{
+    // req.params.id = /:id mostra na pagina de acordo com o id
+
+    const { id } = req.params
+
+    const foundMember = data.members.find(function(member){
+        return member.id == id
+    })
+
+    if(!foundMember){
+        return res.send("Member not found")
+    }
+
+
+    const member = {
+        ...foundMember, // pega tudo dentro de foundMember
+        birth:moment(foundMember.birth).format('DD/MM'),
+       //created_at: new moment(foundMember.created_at).format('L')
+    }
+
+    return res.render("members/show", {member})
 }
 
-// edit
 exports.edit = (req,res)=>{
     const { id } = req.params
 
@@ -104,8 +106,6 @@ exports.edit = (req,res)=>{
 
 }
 
-
-//put
 exports.put = (req,res)=>{
     const { id } = req.body
     let index = 0
@@ -139,7 +139,6 @@ exports.put = (req,res)=>{
     
 }
 
-//delete
 exports.delete = (req,res)=>{
     const { id } = req.body
 
@@ -157,7 +156,5 @@ exports.delete = (req,res)=>{
     })
 }
 
-exports.index = (req,res)=>{
-    return res.render('members/index', { members: data.members })
-}
+
 

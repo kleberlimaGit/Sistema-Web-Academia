@@ -30,7 +30,7 @@ module.exports = {
 
     },
     imc: function(weight, height){
-        return weight/((height/100)*height/100)
+        return Number((weight/((height/100)*height/100)).toFixed(2))
 
     },
     peso: function(imc){

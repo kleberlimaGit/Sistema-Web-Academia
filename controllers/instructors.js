@@ -5,33 +5,15 @@ const moment = require('moment')
 const { age, date } = require('../utils')
 
 moment.locale('pt-BR')
-// show
-exports.show = (req, res)=>{
-    // req.params.id = /:id mostra na pagina de acordo com o id
 
-    const { id } = req.params
-
-    const foundInstructor = data.instructors.find(function(instructor){
-        return instructor.id == id
-    })
-
-    if(!foundInstructor){
-        return res.send("Instructor not found")
-    }
-
-
-    const instructor = {
-        ...foundInstructor, // pega tudo dentro de foundInstructor
-        age: age(foundInstructor.birth),
-        speciality:foundInstructor.speciality.split(","),
-       created_at: new moment(foundInstructor.created_at).format('L')
-    }
-
-    return res.render("instructors/show", {instructor})
+exports.index = (req,res)=>{
+    return res.render('instructors/index', { instructors: data.instructors })
 }
 
+exports.create = (req,res)=>{
+    return res.render('instructors/create')
+}
 
-// create
 exports.post = (req,res)=>{
  
     const keys = Object.keys(req.body)
@@ -76,11 +58,31 @@ exports.post = (req,res)=>{
     //return res.send(req.body)
 }
 
-exports.create = (req,res)=>{
-    return res.render('instructors/create')
+exports.show = (req, res)=>{
+    // req.params.id = /:id mostra na pagina de acordo com o id
+
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find(function(instructor){
+        return instructor.id == id
+    })
+
+    if(!foundInstructor){
+        return res.send("Instructor not found")
+    }
+
+
+    const instructor = {
+        ...foundInstructor, // pega tudo dentro de foundInstructor
+        age: age(foundInstructor.birth),
+        speciality:foundInstructor.speciality.split(","),
+       created_at: new moment(foundInstructor.created_at).format('L')
+    }
+
+    return res.render("instructors/show", {instructor})
 }
 
-// edit
+
 exports.edit = (req,res)=>{
     const { id } = req.params
 
@@ -101,7 +103,7 @@ exports.edit = (req,res)=>{
 }
 
 
-//put atualiza
+
 exports.put = (req,res)=>{
     const { id } = req.body
     let index = 0
@@ -135,7 +137,7 @@ exports.put = (req,res)=>{
     
 }
 
-//delete
+
 exports.delete = (req,res)=>{
     const { id } = req.body
 
@@ -152,7 +154,4 @@ exports.delete = (req,res)=>{
         return res.redirect('/instructors')
     })
 }
-// pagina inicial
-exports.index = (req,res)=>{
-    return res.render('instructors/index', { instructors: data.instructors })
-}
+

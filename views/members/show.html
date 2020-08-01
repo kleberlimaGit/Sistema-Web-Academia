@@ -9,7 +9,7 @@
         
         <div class="back-arrow">
             <h3>DETAILS</h3>
-            <a href="/"><i class="fas fa-arrow-left"></i></a>
+            <a href="/members"><i class="fas fa-arrow-left"></i></a>
         </div>
         
 
@@ -17,7 +17,12 @@
             <div>Member</div>
             <div>{{ member.name }}</div>
         </div>
-                
+
+        <div class="item">
+            <div>Email</div>
+            <div>{{ member.email }}</div>
+        </div>        
+
         <div class="item">
             <div>Birthday</div>
             <div>{{ member.birth}}</div>
@@ -29,19 +34,19 @@
         </div>
                 
         <div class="item">
-            <div>Specialty</div>
-            <div>
-                {% for services in member.speciality %}
-                     <span>{{ services }}</span>
-                {% endfor %}
-            </div>
+            <div>Blood Type</div>
+            <div>{{ member.blood }}</div>
         </div>
 
         <div class="item">
-            <div>Since</div>
-            <div>{{member.created_at}}</div>
-        </div>
+            <div>Weight / Height</div>
+            <div>{{ member.weight }}Kg and {{member.height}}cm</div>
+        </div>        
 
+        <div class="item">
+            <div>IMC</div>
+            <div>{{ member.imc }}, {{member.peso}}</div>
+        </div>
         <a href="/members/{{member.id}}/edit" class="button">Edit</a>
         <!--<a href="#" class="button delete">Delete</a>  -->
 

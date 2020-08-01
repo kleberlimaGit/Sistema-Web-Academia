@@ -12,26 +12,26 @@
    
     <section class="details">
 
-        <form  method="POST" action="/instructors?_method=PUT">
+        <form  method="POST" action="/members?_method=PUT">
 
         <div class="back-arrow">
             <h3>MEMBER EDIT</h3>
-            <a href="/instructors/{{instructor.id}}"><i class="fas fa-arrow-left"></i></a>
+            <a href="/members/{{member.id}}"><i class="fas fa-arrow-left"></i></a>
         </div>
             
 
-            {% include 'instructors/fields.html' %}
+            {% include 'members/fields.html' %}
                 <input 
                 type="hidden" 
                 name="id" 
-                value={{instructor.id}}>
+                value={{member.id}}>
         </form>
 
-        <form id="delete" action="/instructors?_method=DELETE" method="post">
+        <form id="delete" action="/members?_method=DELETE" method="post">
         
             <input type="hidden" 
                     name="id" 
-                    value={{instructor.id}}>
+                    value={{member.id}}>
             <button type="submit">Delete</button>        
             
         </form>
