@@ -19,6 +19,7 @@
                 type="text" 
                 name="name"
                 value="{{member.name}}"
+                required
                 >
             </div>
         </div>
@@ -29,7 +30,9 @@
                 <input 
                     type="email" 
                     name="email"
-                    value="{{member.email}}">
+                    value="{{member.email}}"
+                    required>
+                    
             </div>
 
         </div>
@@ -41,6 +44,7 @@
                 name="birth"
                 value="{{member.birth}}"
                 placeholder="Birth Date"
+                required
                 >
                 
             </div>
@@ -55,7 +59,9 @@
                      value="M" 
                      {% if member.gender == 'M' %}
                      checked
-                    {% endif %}>Male
+                    {% endif %}
+                    required>Male
+                    
                 </span>
                 <span>
                     <input type="radio"
@@ -63,7 +69,8 @@
                      value="F"
                      {% if member.gender == 'F' %}
                      checked
-                    {% endif %}>Female
+                    {% endif %}
+                    required>Female
                 </span>
             </div>
         </div>
@@ -71,7 +78,7 @@
         <div class="item">
             <div>Blood Type</div>
             <div>
-                <select name="blood">
+                <select name="blood" required>
 
                     <option value="A+" 
                     {% if member.blood == "A+" %} selected
@@ -104,7 +111,6 @@
                     <option value="O-" 
                     {% if member.blood == "O-" %} selected
                     {% endif %}> O- </option>
-
                 </select>
             </div>
         </div>
@@ -116,7 +122,7 @@
                 <input type="number" 
                 name="weight"
                 value="{{member.weight}}"
-                >
+                required>
             </div>
         </div>
 
@@ -127,7 +133,7 @@
                 <input type="number" 
                 name="height"
                 value="{{member.height}}"
-                >
+               required>
             </div>
         </div>
 

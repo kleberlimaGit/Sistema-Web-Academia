@@ -12,3 +12,34 @@ for(item of menuItems){
 
 
 
+
+
+const formDelete = document.querySelector("#delete")
+const modal = document.querySelector('.modal')
+const botao = document.querySelector("#modal-content-option a")
+
+formDelete.addEventListener('click',()=>{
+    modal.classList.add('ativo')
+    botao.addEventListener('click',()=>{
+        modal.classList.remove('ativo')
+    })
+
+})
+
+
+//formDelete.addEventListener("submit",function(event){
+    //const confirmation = confirm("Deseja Deletar?")
+    //if(!confirmation){
+    //event.preventDefault()
+    //}
+//})
+
+//const botao = document.querySelectorAll("#modal-content-option a")
+//for(const b of botao){
+   // b.addEventListener("click",()=>{
+      //  console.log(b.textContent)
+   // })
+//}
+
+
+

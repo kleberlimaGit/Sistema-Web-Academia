@@ -18,6 +18,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #3c91e6;
+    position: relative;
 }
 
 header{
@@ -200,14 +201,14 @@ a.button{
     font-size: 16px;
 }
 
-#delete button{
+#delete{
     margin-top: 8px;
     color: var(--radio-color2);
     background-color: #fafffd;
     transition: 0.2s;
 }
 
-#delete button:hover{
+#delete:hover{
     margin-top: 8px;
     background-color: var(--radio-color2);
     color: #fafffd;
@@ -301,5 +302,74 @@ tbody tr td:first-child span{
    text-transform: uppercase;
 }
 
+
+/* == MODAL == */
+
+.modal.ativo {
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#modal-content{
+    background-color: var(--yellow-green);
+    width: 480px;
+    height: 260px;
+    margin-top: 316px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+#modal-content h4{
+    margin-top: 32px;
+    color: var(--coffe-color);
+    font-weight: 700;
+    font-size: 24px;
+
+}
+
+#modal-content-option{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    
+}
+#modal-content-option form{
+height: 0;
+}
+
+#modal-content-option button{
+    margin: 0;
+    background-color: var(--radio-color2);
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: #fafffd;
+    font-weight: 700;
+
+}
+
+#modal-content-option a{
+    margin-left: 48px;
+    background-color: var(--primary-color);
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    color: #fafffd;
+}
+
+#modal-content-option button:hover{
+    background-color: #9c1410;
+    transition: 0.4s;
+}
+
+#modal-content-option a:hover{
+    background-color: #233ba7;
+    transition: 0.4s;
+}
 
 

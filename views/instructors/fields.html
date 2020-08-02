@@ -20,7 +20,7 @@
                 name="name"
                 value="{{instructor.name}}"
                 placeholder="Instructor Name"
-                >
+                required>
             </div>
         </div>
                 
@@ -31,7 +31,7 @@
                 name="birth"
                 value="{{instructor.birth}}"
                 placeholder="Birth Date"
-                >
+                required>
                 
             </div>
         </div>
@@ -45,7 +45,8 @@
                      value="M" 
                      {% if instructor.gender == 'M' %}
                      checked
-                    {% endif %}>Male
+                    {% endif %}
+                    required>Male
                 </span>
                 <span>
                     <input type="radio"
@@ -53,7 +54,8 @@
                      value="F"
                      {% if instructor.gender == 'F' %}
                      checked
-                    {% endif %}>Female
+                    {% endif %}
+                    required>Female
                 </span>
             </div>
         </div>
@@ -65,7 +67,7 @@
                 name="speciality"
                 value="{{ instructor.speciality}}"
                 placeholder="Separate your specialties with a comma"
-                >
+                required>
             </div>
         </div>
 

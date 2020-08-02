@@ -27,19 +27,11 @@
                 value={{instructor.id}}>
         </form>
 
-        <form id="delete" action="/instructors?_method=DELETE" method="post">
-        
-            <input type="hidden" 
-                    name="id" 
-                    value={{instructor.id}}>
-            <button type="submit">Delete</button>        
-            
-        </form>
+
+        <a href="#" id='delete' class="button">Delete</a>
+
 
     </section>
-
-
-
 
 
 
@@ -47,5 +39,22 @@
 
 
 
+    <div  class="modal">
+        <div id="modal-content">
+            <h4>Deseja Deletar {{instructor.name}} ?</h4>
+                <div id="modal-content-option">
+                    
+                    <form  action="/instructors?_method=DELETE" method="post">
+                        <input type="hidden" 
+                                name="id" 
+                                value={{instructor.id}}>
+                        <button type="submit">Sim</button>        
+                
+                    </form>
+                    <a href="#">Não</a>
+                </div>
+        </div>
+    </div>
 
 {% endblock content %}
+
