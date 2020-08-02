@@ -19,9 +19,11 @@ const modal = document.querySelector('.modal')
 const botao = document.querySelector("#modal-content-option a")
 
 formDelete.addEventListener('click',()=>{
+    document.body.style.overflow = 'hidden'
     modal.classList.add('ativo')
     botao.addEventListener('click',()=>{
         modal.classList.remove('ativo')
+        document.body.style.overflow ='initial'
     })
 
 })

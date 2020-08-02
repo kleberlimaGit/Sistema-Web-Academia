@@ -1,18 +1,14 @@
 {
-  "members": [
+  "members": [],
+  "instructors": [
     {
       "id": 1,
-      "avatar_url": "https://images.unsplash.com/photo-1543975200-8e313fb04fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "avatar_url": "https://images.unsplash.com/photo-1550345332-09e3ac987658?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       "name": "kleber lima",
-      "email": "kleber@gmail.com",
       "birth": 649209600000,
       "gender": "M",
-      "blood": "A+",
-      "weight": "70",
-      "height": "171",
-      "imc": 23.94,
-      "peso": "Normal Weight"
+      "speciality": "Musculação, Crossfit",
+      "created_at": "2020-08-02T21:18:45.310Z"
     }
-  ],
-  "instructors": []
+  ]
 }

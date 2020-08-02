@@ -6,8 +6,11 @@
             <thead>
                 <tr>
                     <th>Member</th>
-                    <th>Atendimento</th>
-                    <th>Ação</th>
+                    <th>Email</th>
+                    <th>Weight</th>
+                    <th>Height</th>
+                    <th>IMC</th>
+                    
                 </tr>
             </thead>
 
@@ -18,7 +21,10 @@
                             <span style="background-image: url({{member.avatar_url}})"></span>
                             {{member.name}}
                         </td>
-                        <td>{{member.speciality}}</td>
+                        <td>{{member.email}}</td>
+                        <td>{{member.weight}}Kg</td>
+                        <td>{{member.height}}cm</td>
+                        <td>{{member.imc}}</td>
                         <td><a href="/members/{{member.id}}">Ver</a></td>
                     </tr>
                 {% endfor %}

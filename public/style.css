@@ -13,7 +13,7 @@
     padding: 0;
     box-sizing: border-box;
     border: none;
-    text-transform: capitalize;
+    
 }
 body{
     font-family: 'Roboto', sans-serif;
@@ -304,11 +304,18 @@ tbody tr td:first-child span{
 
 
 /* == MODAL == */
+.modal{
+    opacity: 0;
+    display: none;
+}
+
 
 .modal.ativo {
-    position: fixed;
+    opacity: 1;
+    position: absolute;
     background-color: rgba(0,0,0,0.6);
     top: 0;
+    bottom: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
